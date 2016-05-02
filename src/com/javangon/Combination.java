@@ -29,6 +29,6 @@ public class Combination<T>
     @Override
     public String toString()
     {
-        return String.format("first:%s second %s", first.toString(), second.toString());
+        return String.format("%s, %s", first, second);
     }
 }

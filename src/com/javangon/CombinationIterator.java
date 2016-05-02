@@ -8,13 +8,17 @@ public class CombinationIterator<T> implements Iterator<Combination<? extends T>
     private final List<? extends T> list;
     private final CombinationIndexer indexer;
 
-    public CombinationIterator(List<? extends T> list)
+    private CombinationIterator(List<? extends T> list)
     {
         this.list = list;
         indexer = new CombinationIndexer(list.size());
     }
 
-    @Override
+    public static <T> CombinationIterator<T> of(List<? extends T> list)
+    {
+        return new CombinationIterator<>(list);
+    }
+
     public boolean hasNext()
     {
         return indexer.hasMoreCombinations();

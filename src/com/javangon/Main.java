@@ -7,10 +7,10 @@ public class Main
 {
     public static void main(String[] args)
     {
-        List<Integer> list = Arrays.asList(0,1,2,3);
+        List<Integer> ints = Arrays.asList(0,1,2,3);
+        List<String> strings = Arrays.asList("matt", "bill", "mark", "dave");
 
-        CombinationIterator<Integer> integerCombinations = new CombinationIterator<>(list);
-
-        integerCombinations.forEachRemaining(System.out::println);
+        CombinationIterator.of(ints).forEachRemaining(System.out::println);
+        CombinationIterator.of(strings).forEachRemaining(System.out::println);
     }
 }
