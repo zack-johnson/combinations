@@ -26,7 +26,7 @@ public class CombinationIterator<T> implements Iterator<Combination<? extends T>
         T primaryObject = list.get(indexer.getPrimaryIndex());
         T secondaryObject = list.get(indexer.getSecondaryIndex());
 
-        Combination<T> combination = SimpleCombination.of(primaryObject, secondaryObject);
+        Combination<T> combination = Combination.of(primaryObject, secondaryObject);
 
         indexer.advanceToNexCombination();
 

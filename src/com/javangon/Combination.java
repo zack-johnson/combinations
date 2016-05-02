@@ -1,7 +1,34 @@
 package com.javangon;
 
-public interface Combination<T>
+public class Combination<T>
 {
-    T getFirst();
-    T getSecond();
+    private final T first;
+    private final T second;
+
+    private Combination(T first, T second)
+    {
+        this.first = first;
+        this.second = second;
+    }
+
+    public static <T> Combination<T> of(T first, T second)
+    {
+        return new Combination<>(first, second);
+    }
+
+    public T getFirst()
+    {
+        return first;
+    }
+
+    public T getSecond()
+    {
+        return second;
+    }
+
+    @Override
+    public String toString()
+    {
+        return String.format("first:%s second %s", first.toString(), second.toString());
+    }
 }
