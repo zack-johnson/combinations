@@ -8,8 +8,8 @@ public class Main
     public static void main(String[] args)
     {
         List<Integer> ints = Arrays.asList(0, 1, 2, 3);
-        List<String> strings = Arrays.asList("matt", "bill", "mark");
-        List<String> strings2 = Arrays.asList("jeff", "liam");
+        List<String> strings2 = Arrays.asList("matt", "bill", "mark");
+        List<String> strings = Arrays.asList("jeff", "liam");
 
         Combinations.of(ints).forEachRemaining(System.out::println);
         Combinations.of(strings, strings2).forEachRemaining(System.out::println);

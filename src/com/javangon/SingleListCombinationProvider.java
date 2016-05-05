@@ -2,12 +2,12 @@ package com.javangon;
 
 import java.util.List;
 
-public class SingleListElementCombiner<T> implements CombinationProvider<T>
+public class SingleListCombinationProvider<T> implements CombinationProvider<T>
 {
     private final List<? extends T> list;
     private final SingleListCombinationIndexer indexer;
 
-    public SingleListElementCombiner(List<? extends T> list)
+    public SingleListCombinationProvider(List<? extends T> list)
     {
         this.list = list;
         indexer = new SingleListCombinationIndexer(list.size());

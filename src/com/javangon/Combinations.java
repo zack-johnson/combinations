@@ -9,7 +9,7 @@ public class Combinations<T> implements Iterator<Combination<? extends T>>
 
     private Combinations(List<? extends T> list)
     {
-        combinationProvider = new SingleListElementCombiner<>(list);
+        combinationProvider = new SingleListCombinationProvider<>(list);
     }
 
     private Combinations(List<? extends T> list1, List<? extends T> list2)
