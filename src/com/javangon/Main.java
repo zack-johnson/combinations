@@ -8,10 +8,11 @@ public class Main
     public static void main(String[] args)
     {
         List<Integer> ints = Arrays.asList(0, 1, 2, 3);
-        List<String> strings = Arrays.asList("matt", "bill", "mark", "dave");
+        List<String> strings = Arrays.asList("matt", "bill", "mark");
+        List<String> strings2 = Arrays.asList("jeff", "liam");
 
-        CombinationIterator.of(ints).forEachRemaining(System.out::println);
-        CombinationIterator.of(strings).forEachRemaining(System.out::println);
+        Combinations.of(ints).forEachRemaining(System.out::println);
+        Combinations.of(strings, strings2).forEachRemaining(System.out::println);
 
 //        0, 1
 //        0, 2
@@ -19,11 +20,11 @@ public class Main
 //        1, 2
 //        1, 3
 //        2, 3
-//        matt, bill
-//        matt, mark
-//        matt, dave
-//        bill, mark
-//        bill, dave
-//        mark, dave
+//        matt, jeff
+//        matt, liam
+//        bill, jeff
+//        bill, liam
+//        mark, jeff
+//        mark, liam
     }
 }

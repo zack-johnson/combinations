@@ -1,13 +1,13 @@
 package com.javangon;
 
-public class CombinationIndexer
+public class SingleListCombinationIndexer
 {
     private int primaryIndex;
     private int secondaryIndex;
     private int lastPrimaryIndex;
     private int lastSecondaryIndex;
 
-    public CombinationIndexer(int listSize)
+    public SingleListCombinationIndexer(int listSize)
     {
         primaryIndex = 0;
         secondaryIndex = 1;
